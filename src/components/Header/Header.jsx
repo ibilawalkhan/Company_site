@@ -34,10 +34,10 @@ function Header() {
         <header className='py-3 shadow'>
             <Container>
                 <nav className='flex'>
-                    <div className='mr-4 text-3xl'>
+                    <div className='mr-4 text-sm hidden sm:text-3xl sm:block'>
                         <Link to='/'>
                             {/* <Logo width='70px' /> */}
-                            WAVENET
+                            <span className='text-[#92DEED]'>WAV</span>ENET
                         </Link>
                     </div>
                     <ul className='flex ml-auto'>
