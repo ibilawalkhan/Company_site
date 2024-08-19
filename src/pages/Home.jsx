@@ -1,7 +1,11 @@
 import React from 'react'
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import Typography from '@mui/material/Typography';
+import theme from '../theme'
 import {
-  Container,
-  Card
+  Container
 } from '../components/index'
 import {
   first,
@@ -23,34 +27,112 @@ function Home() {
             PARTNERS
           </div>
           <div className='flex flex-col items-center ml-4 mt-6 text-sm/[12px] sm:text-xs'>
-            <p>From custom software development to cybersecurity, our team of experts is dedicated</p>
-            <p>to delivering solutions that are tailored to your unique needs.</p>
+            <Typography variant="caption" display="block" gutterBottom>
+              From custom software development to cybersecurity, our team of experts is dedicated
+            </Typography>
+            <Typography variant="caption" display="block" gutterBottom>
+              to delivering solutions that are tailored to your unique needs.
+            </Typography>
           </div>
         </div>
-        <div className='min-h-screen mt-20'>
-          <h1 className='text-2xl sm:text-6xl font-bold flex justify-center sm:justify-start'>Why<br />Choose Us?</h1>
-          <div className='flex flex-col justify-center items-center sm:flex-row sm:justify-between'>
-            <Card
-              image={first}
-              title="expertise"
-              description='Our team of experienced experts have the knowledge and expertise to deliver innovative IT solutions that meet your unique needs.'
-            />
 
-            <Card
-              image={second}
-              title="technology"
-              description='We stay up to date with the latest trends and technologies in the IT industry, so you can get the most advanced solutions available.'
-            />
-            <Card
-              image={third}
-              title="solutions"
-              description='We take a personalized approach to every project, working closely with you to understand your business and create solutions.'
-            />
-            <Card
-              image={fourth}
-              title="results"
-              description="Our track record speaks for itself – we've helped businesses of all sizes and industries achieve their goals with our IT solutions."
-            />
+        <div className='min-h-screen mt-20'>
+          <div>
+            <Typography
+              variant="h2"
+              gutterBottom
+              sx={{
+                fontWeight: 'bold', 
+                display: 'flex',
+                justifyContent: 'center',
+                fontSize: '2rem', 
+                [theme.breakpoints.up('sm')]: {
+                  fontSize: '3rem', 
+                  justifyContent: 'flex-start',
+                },
+              }}
+            >
+              Why<br />Choose Us?
+            </Typography>
+          </div>
+
+          <div className='flex flex-col justify-center items-center sm:flex-row sm:justify-between'>
+            <Card sx={{ maxWidth: 245, backgroundColor: '#11112B', color: 'white', marginTop: '40px' }}>
+              <CardMedia
+                component="img"
+                alt="green iguana"
+                image={first}
+                sx={{ width: '50%', objectFit: 'cover' }}
+              />
+              <CardContent sx={{ marginTop: '30px' }}>
+                <Typography gutterBottom variant="h5" component="div">
+                  Expertise
+                </Typography>
+                <Typography variant="body2">
+                  Our team of experienced experts have the knowledge and expertise to
+                  deliver innovative IT solutions that meet your unique needs
+                </Typography>
+              </CardContent>
+            </Card>
+
+            <Card sx={{ maxWidth: 245, backgroundColor: '#11112B', color: 'white', marginTop: '40px' }}>
+              <CardMedia
+                component="img"
+                alt="green iguana"
+                height="140"
+                image={third}
+                sx={{ width: '50%', objectFit: 'cover' }}
+              />
+              <CardContent sx={{ marginTop: '30px' }}>
+                <Typography gutterBottom variant="h5" component="div">
+                  Technology
+                </Typography>
+                <Typography variant="body2">
+                  We stay up to date with the latest trends and technologies in the IT industry,
+                  so you can get the most advanced solutions available.
+                </Typography>
+              </CardContent>
+            </Card>
+
+            <Card sx={{ maxWidth: 245, backgroundColor: '#11112B', color: 'white', marginTop: '40px' }}>
+              <CardMedia
+                component="img"
+                alt="green iguana"
+                height="140"
+                image={fourth}
+                sx={{ width: '50%', objectFit: 'cover' }}
+              />
+              <CardContent sx={{ marginTop: '30px' }}>
+                <Typography gutterBottom variant="h5" component="div">
+                  Solutions
+                </Typography>
+                <Typography variant="body2">
+                  We take a personalized approach to every project, working closely with
+                  you to understand your business and create solutions.
+                </Typography>
+              </CardContent>
+            </Card>
+
+            <Card sx={{ maxWidth: 245, backgroundColor: '#11112B', color: 'white', marginTop: '40px' }}>
+              <CardMedia
+                component="img"
+                alt="green iguana"
+                height="140"
+                image={second}
+                sx={{ width: '50%', aspectRatio: '10/9', objectFit: 'cover' }}
+              />
+              <CardContent sx={{ marginTop: '30px' }}>
+                <Typography gutterBottom variant="h5" component="div">
+                  results
+                </Typography>
+                <Typography variant="body2">
+                  Our track record speaks for itself – we've helped businesses of all sizes
+                  and industries achieve their goals with our IT solutions.
+                </Typography>
+              </CardContent>
+            </Card>
+
+
           </div>
         </div>
         <div></div>
