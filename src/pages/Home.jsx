@@ -42,12 +42,12 @@ function Home() {
               variant="h2"
               gutterBottom
               sx={{
-                fontWeight: 'bold', 
+                fontWeight: 'bold',
                 display: 'flex',
                 justifyContent: 'center',
-                fontSize: '2rem', 
+                fontSize: '2rem',
                 [theme.breakpoints.up('sm')]: {
-                  fontSize: '3rem', 
+                  fontSize: '3rem',
                   justifyContent: 'flex-start',
                 },
               }}
@@ -131,12 +131,25 @@ function Home() {
                 </Typography>
               </CardContent>
             </Card>
-
-
           </div>
         </div>
-        <div></div>
       </Container>
+      <div className='bg-[#D5D9E5] text-black min-h-screen flex flex-col items-center justify-center'>
+        <Container>
+          <div className='flex justify-center'>
+            <h2 className='text-2xl sm:text-4xl p-6'>
+              <span className='font-bold'>We believe that</span>
+              <i> technology</i> <br />
+              <span className='font-bold'> can</span>
+              <span> change</span>
+              <span className='font-bold'> the world</span>
+            </h2>
+          </div>
+          <div className='flex justify-center'>
+            {/* <h6 className=''>That's why we're committed to delivering innovative IT solutions to businesses of all <br /> sizes. Our team of experienced professionals is dedicated to helping you achieve <br /> your goals and thrive in a rapidly evolving digital landscape.</h6> */}
+          </div>
+        </Container>
+      </div>
     </div>
   )
 }
