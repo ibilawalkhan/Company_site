@@ -137,7 +137,7 @@ function Home() {
       <div className='bg-[#D5D9E5] text-black min-h-screen flex flex-col items-center justify-center'>
         <Container>
           <div className='flex justify-center'>
-            <h2 className='text-2xl sm:text-4xl p-6'>
+            <h2 className='text-2xl sm:text-4xl md:text-6xl p-6'>
               <span className='font-bold'>We believe that</span>
               <i> technology</i> <br />
               <span className='font-bold'> can</span>
@@ -145,8 +145,24 @@ function Home() {
               <span className='font-bold'> the world</span>
             </h2>
           </div>
-          <div className='flex justify-center'>
-            {/* <h6 className=''>That's why we're committed to delivering innovative IT solutions to businesses of all <br /> sizes. Our team of experienced professionals is dedicated to helping you achieve <br /> your goals and thrive in a rapidly evolving digital landscape.</h6> */}
+          <div className='flex flex-col items-center justify-center ml-6 mr-6 sm:ml-24 sm:mr-24 lg:ml-60 lg:mr-60'>
+            <Typography variant="caption" display="block" gutterBottom>
+              That's why we're committed to delivering innovative IT solutions to businesses of all sizes.
+              Our team of experienced professionals is dedicated to helping you achieve your goals and thrive
+              in a rapidly evolving digital landscape.
+            </Typography>
+          </div>
+          <div className='flex flex-col justify-center items-center mt-4 w-full'>
+            <div className='flex justify-between w-1/2 mr-10 sm:m-0'>
+              <div className='flex justify-center w-1/5 font-bold text-2xl'>500+</div>
+              <div className='flex justify-center w-1/5 font-bold text-2xl'>98%</div>
+              <div className='flex justify-center w-1/5 font-bold text-2xl'>35+</div>
+            </div>
+            <div className='flex justify-between w-1/2 mr-16 sm:m-0'>
+              <div>Successful Projects</div>
+              <div>Satisfied Clients</div>
+              <div>Handled Clients</div>
+            </div>
           </div>
         </Container>
       </div>
