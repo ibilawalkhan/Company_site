@@ -12,7 +12,7 @@ function App() {
       <div className="flex-grow">
         <Outlet />
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   )
 }

@@ -3,9 +3,12 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
+import Button from '@mui/material/Button';
 import theme from '../theme'
 import {
-  Container
+  Container,
+  ClientStory,
+  ServiceCard
 } from '../components/index'
 import {
   first,
@@ -163,6 +166,161 @@ function Home() {
               <div>Satisfied Clients</div>
               <div>Handled Clients</div>
             </div>
+          </div>
+        </Container>
+      </div>
+      <div className='bg-[#11112B] text-white min-h-96'>
+        <Container>
+          <div className=''>
+            <Typography
+              variant="h2"
+              gutterBottom
+              sx={{
+                fontWeight: 'bold',
+                display: 'flex',
+                justifyContent: 'center',
+                fontSize: '2rem',
+                marginTop: '100px',
+                [theme.breakpoints.up('sm')]: {
+                  fontSize: '3rem',
+                  justifyContent: 'flex-start',
+                },
+              }}
+            >
+              Client Stories
+            </Typography>
+          </div>
+          <div className='sm:flex'>
+            <ClientStory
+              title="Amazing!"
+              testimonial="“WaveNet's cybersecurity solution gave us the peace of mind we needed to focus on our business. They took the time to understand our unique needs and created a solution that protected our sensitive data and ensured compliance with industry regulations.”"
+              clientName="Tom Johnson"
+              clientTitle="CIO of Mika Medika Healthcare"
+            // clientImage={firstClientImage}
+            />
+            <hr className="border-1 border-gray-300 my-12 sm:mx-4 sm:h-40 sm:border-l sm:border-t-0" />
+            <ClientStory
+              title="Best Service"
+              testimonial="“We were struggling to keep up with the demands of our growing business until we partnered with WaveNet. Their custom software development solution has helped us streamline our operations and improve efficiency, saving us time and money.”"
+              clientName="Jane Doe"
+              clientTitle="COO of DEF Manufacturing"
+            // clientImage={firstClientImage}
+            />
+          </div>
+        </Container>
+      </div>
+      <div className='bg-[#D5D9E5] text-black min-h-screen'>
+        <div className='p-1 mt-28'>
+          <Typography
+            variant="h2"
+            gutterBottom
+            sx={{
+              fontWeight: 'bold',
+              display: 'flex',
+              justifyContent: 'center',
+              fontSize: '2rem',
+              marginTop: '40px',
+              [theme.breakpoints.up('sm')]: {
+                fontSize: '3.5rem'
+              },
+            }}
+          >
+            Services
+          </Typography>
+        </div>
+        <div className='mr-8 ml-8 sm:mr-20 sm:ml-20 mt-10'>
+          <ServiceCard serviceName="Custom Software Development" />
+          <hr className='border-1 border-gray-600 mt-8' />
+          <ServiceCard serviceName="Web Development" />
+          <hr className='border-1 border-gray-600 mt-8' />
+          <ServiceCard serviceName="Mobile Development" />
+          <hr className='border-1 border-gray-600 mt-8' />
+          <ServiceCard serviceName="IOT Development" />
+          <hr className='border-1 border-gray-600 mt-8' />
+          <ServiceCard serviceName="Embedded Designs" />
+          <hr className='border-1 border-gray-600 mt-8' />
+          <ServiceCard serviceName="Generative AI" />
+          <hr className='border-1 border-gray-600 mt-8' />
+          <ServiceCard serviceName="Machine Learning" />
+          <hr className='border-1 border-gray-600 mt-8' />
+          <ServiceCard serviceName="Bubble No-Code Development" />
+          <hr className='border-1 border-gray-600 mt-8' />
+        </div>
+      </div>
+      <div className='bg-[#11112B] text-white'>
+        <Container>
+          <div>
+            <div className='flex justify-center'>
+              <Typography
+                variant="h2"
+                gutterBottom
+                sx={{
+                  fontWeight: 'bold',
+                  fontSize: '1.5rem',
+                  marginTop: '80px',
+                  [theme.breakpoints.up('sm')]: {
+                    fontSize: '3rem'
+                  },
+                }}
+              >
+                Need IT Solutions?
+              </Typography>
+            </div>
+            <div className='flex justify-center'>
+              <Typography
+                variant="h2"
+                gutterBottom
+                sx={{
+                  fontWeight: 'bold',
+                  fontSize: '1.5rem',
+                  [theme.breakpoints.up('sm')]: {
+                    fontSize: '3rem'
+                  },
+                }}
+              >
+                Let’s start now
+              </Typography>
+            </div>
+            <div className='flex justify-center mt-8'>
+              <Button variant="outlined" sx={{ color: 'white' }}>GET FREE CONSULTATION</Button>
+            </div>
+          </div>
+          <div className='flex justify-around mt-28'>
+            <div className='flex flex-col sm:flex-row'>
+              <div className='text-[#92DEED] sm:w-1/5 text-2xl mb-4'>Wavenet</div>
+              <div className='flex justify-between'>
+                <div className='ml-8'>
+                  <div className='font-bold'>Explore</div>
+                  <div className='mt-2'>About</div>
+                  <div className='mt-2'>Services</div>
+                  <div className='mt-2'>Blog</div>
+                  <div className='mt-2'>Contact</div>
+                </div>
+                <div className='ml-8'>
+                  <div className='font-bold'>Contact</div>
+                  <div className='mt-2'>Email</div>
+                  <div className='mt-2'>Phone</div>
+                  <div className='mt-2'>Address</div>
+                  <div className='mt-2'>Social Media</div>
+                </div>
+                <div className='ml-8'>
+                  <div className='font-bold'>Newsletter</div>
+                  <div className='w-1/2'>
+                    Subscribe to our newsletter to stay informed about our latest products, services, and promotions.
+                    Feel free to unsubscribe anytime!
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr className='border-1 white mt-8' />
+          <div className='flex justify-between'>
+            <Typography variant="caption" display="block" gutterBottom sx={{ marginTop: '10px', fontSize: '10px' }}>
+              Copyright © 2023 for WaveNet. All rights reserved.
+            </Typography>
+            <Typography variant="caption" display="block" gutterBottom sx={{ marginTop: '10px', fontSize: '10px' }}>
+              Terms & Condition  |  Privacy Policy
+            </Typography>
           </div>
         </Container>
       </div>
