@@ -65,10 +65,22 @@ function Home() {
                 component="img"
                 alt="green iguana"
                 image={first}
-                sx={{ width: '50%', objectFit: 'cover' }}
+                sx={{
+                  width: '50%',
+                  objectFit: 'cover',
+                  display: 'flex',
+                  justifyContent: 'center',
+                  margin: '0 auto'
+                }}
               />
               <CardContent sx={{ marginTop: '30px' }}>
-                <Typography gutterBottom variant="h5" component="div">
+                <Typography gutterBottom variant="h5" component="div"
+                  sx={{
+                    textAlign: 'center',
+                    [theme.breakpoints.up('sm')]: {
+                      textAlign: 'left',
+                    },
+                  }}>
                   Expertise
                 </Typography>
                 <Typography variant="body2">
@@ -84,10 +96,23 @@ function Home() {
                 alt="green iguana"
                 height="140"
                 image={third}
-                sx={{ width: '50%', objectFit: 'cover' }}
+                sx={{
+                  width: '50%',
+                  objectFit: 'cover',
+                  display: 'flex',
+                  justifyContent: 'center',
+                  margin: '0 auto',
+                }}
               />
               <CardContent sx={{ marginTop: '30px' }}>
-                <Typography gutterBottom variant="h5" component="div">
+                <Typography gutterBottom variant="h5" component="div"
+                  sx={{
+                    textAlign: 'center',
+                    [theme.breakpoints.up('sm')]: {
+                      textAlign: 'left',
+                    },
+                  }}
+                >
                   Technology
                 </Typography>
                 <Typography variant="body2">
@@ -103,10 +128,23 @@ function Home() {
                 alt="green iguana"
                 height="140"
                 image={fourth}
-                sx={{ width: '50%', objectFit: 'cover' }}
+                sx={{
+                  width: '50%',
+                  objectFit: 'cover',
+                  display: 'flex',
+                  justifyContent: 'center',
+                  margin: '0 auto'
+                }}
               />
               <CardContent sx={{ marginTop: '30px' }}>
-                <Typography gutterBottom variant="h5" component="div">
+                <Typography gutterBottom variant="h5" component="div"
+                  sx={{
+                    textAlign: 'center',
+                    [theme.breakpoints.up('sm')]: {
+                      textAlign: 'left',
+                    },
+                  }}
+                >
                   Solutions
                 </Typography>
                 <Typography variant="body2">
@@ -122,11 +160,24 @@ function Home() {
                 alt="green iguana"
                 height="140"
                 image={second}
-                sx={{ width: '50%', aspectRatio: '10/9', objectFit: 'cover' }}
+                sx={{
+                  width: '50%',
+                  objectFit: 'cover',
+                  display: 'flex',
+                  justifyContent: 'center',
+                  margin: '0 auto'
+                }}
               />
               <CardContent sx={{ marginTop: '30px' }}>
-                <Typography gutterBottom variant="h5" component="div">
-                  results
+                <Typography gutterBottom variant="h5" component="div"
+                  sx={{
+                    textAlign: 'center',
+                    [theme.breakpoints.up('sm')]: {
+                      textAlign: 'left',
+                    },
+                  }}
+                >
+                  Results
                 </Typography>
                 <Typography variant="body2">
                   Our track record speaks for itself – we've helped businesses of all sizes
@@ -187,7 +238,7 @@ function Home() {
                 },
               }}
             >
-              Client Stories
+              Testimonials
             </Typography>
           </div>
           <div className='sm:flex'>

@@ -12,7 +12,7 @@ function Card({ image, title, description }) {
                     />
                 </div>
                 <div className='mt-4'>
-                    <h1 className='font-bold'>{title}</h1>
+                    <h1 className='font-bold '>{title}</h1>
                     <p className='text-sm mt-2'>{description}</p>
                 </div>
             </div>
