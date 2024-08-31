@@ -61,7 +61,7 @@ function Consultation() {
                     </div>
                     <div className='flex justify-around mt-28'>
                         <div className='flex flex-col sm:flex-row'>
-                            <div className='text-[#92DEED] sm:w-1/5 text-2xl mb-4'>Wavenet</div>
+                            <div className='text-[#92DEED] sm:w-1/5 text-2xl mb-4'>GutenSol</div>
                             <div className='flex justify-between'>
                                 <div className='ml-8'>
                                     <div className='font-bold'>Explore</div>

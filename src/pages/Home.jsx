@@ -49,14 +49,14 @@ function Home() {
   const clientStories = [
     {
       title: "Amazing!",
-      testimonial: "“WaveNet's cybersecurity solution gave us the peace of mind we needed to focus on our business. They took the time to understand our unique needs and created a solution that protected our sensitive data and ensured compliance with industry regulations.”",
+      testimonial: "“GutenSol's cybersecurity solution gave us the peace of mind we needed to focus on our business. They took the time to understand our unique needs and created a solution that protected our sensitive data and ensured compliance with industry regulations.”",
       clientName: "Tom Johnson",
       clientTitle: "CIO of Mika Medika Healthcare",
       // clientImage: firstClientImage // Uncomment and add the correct image path if needed
     },
     {
       title: "Best Service",
-      testimonial: "“We were struggling to keep up with the demands of our growing business until we partnered with WaveNet. Their custom software development solution has helped us streamline our operations and improve efficiency, saving us time and money.”",
+      testimonial: "“We were struggling to keep up with the demands of our growing business until we partnered with GutenSol. Their custom software development solution has helped us streamline our operations and improve efficiency, saving us time and money.”",
       clientName: "Jane Doe",
       clientTitle: "COO of DEF Manufacturing",
       // clientImage: secondClientImage // Uncomment and add the correct image path if needed
