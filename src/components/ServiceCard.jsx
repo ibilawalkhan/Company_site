@@ -1,29 +1,54 @@
-import React from 'react'
+import * as React from 'react';
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
-import theme from '../theme'
+import CardActionArea from '@mui/material/CardActionArea';
 
-function ServiceCard({ serviceName }) {
+function ServiceCard({
+    image,
+    title,
+    description,
+    className = ""
+}) {
     return (
-        <div>
-            <Typography
-                variant="h2"
-                gutterBottom
-                sx={{
-                    display: 'flex',
-                    justifyContent: 'start',
-                    fontSize: '1rem',
-                    marginTop: '40px',
-                    fontStyle: 'italic',
-                    color: '#11112B',
-                    [theme.breakpoints.up('sm')]: {
-                        fontSize: '1.5rem',
-                        justifyContent: 'flex-start'
-                    },
+        <div className={`bg-[#646262] row-span-6 rounded-xl sm:row-span-8 text-black p-2 ${className}`}>
+            <div className={`bg-[#646262]`}>
+                <img
+                    src={image}
+                    alt="Mobile icon"
+                    className={`h-10 object-cover bg-[#646262] ml-3`}
+                />
+            </div>
+            <div className={`bg-[#646262]`}>
+                <Card sx={{
+                    backgroundColor: 'transparent',
+                    boxShadow: 'none',
+                    border: 'none',
                 }}
-            >
-                {serviceName}
-            </Typography>
-            
+                >
+                    <CardActionArea sx={{ backgroundColor: '#646262', border: '#646262' }}>
+                        <CardContent>
+                            <Typography gutterBottom variant="h5" component="div"
+                                sx={{
+                                    fontSize: '1rem',
+                                    fontWeight: 'bold',
+                                    color: 'white'
+                                }}
+                            >
+                                {title}
+                            </Typography>
+                            <Typography variant="body2"
+                                sx={{
+                                    fontSize: '0.6rem',
+                                    color: 'rgba(255, 255, 255, 0.7)'
+                                }}
+                            >
+                                {description}
+                            </Typography>
+                        </CardContent>
+                    </CardActionArea>
+                </Card>
+            </div>
         </div>
     )
 }

@@ -3,12 +3,12 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
 import theme from '../theme'
 import {
   Container,
   ClientStory,
-  ServiceCard
+  ServiceCard,
+  Consultation
 } from '../components/index'
 import {
   first,
@@ -18,6 +18,51 @@ import {
 } from '../assets/index'
 
 function Home() {
+
+  const cardData = [
+    {
+      title: 'Expertise',
+      description:
+        'Our team of experienced experts have the knowledge and expertise to deliver innovative IT solutions that meet your unique needs.',
+      image: first,
+    },
+    {
+      title: 'Technology',
+      description:
+        'We stay up to date with the latest trends and technologies in the IT industry, so you can get the most advanced solutions available.',
+      image: third,
+    },
+    {
+      title: 'Solutions',
+      description:
+        'We take a personalized approach to every project, working closely with you to understand your business and create solutions.',
+      image: fourth,
+    },
+    {
+      title: 'Results',
+      description:
+        "Our track record speaks for itself – we've helped businesses of all sizes and industries achieve their goals with our IT solutions.",
+      image: second,
+    },
+  ];
+
+  const clientStories = [
+    {
+      title: "Amazing!",
+      testimonial: "“WaveNet's cybersecurity solution gave us the peace of mind we needed to focus on our business. They took the time to understand our unique needs and created a solution that protected our sensitive data and ensured compliance with industry regulations.”",
+      clientName: "Tom Johnson",
+      clientTitle: "CIO of Mika Medika Healthcare",
+      // clientImage: firstClientImage // Uncomment and add the correct image path if needed
+    },
+    {
+      title: "Best Service",
+      testimonial: "“We were struggling to keep up with the demands of our growing business until we partnered with WaveNet. Their custom software development solution has helped us streamline our operations and improve efficiency, saving us time and money.”",
+      clientName: "Jane Doe",
+      clientTitle: "COO of DEF Manufacturing",
+      // clientImage: secondClientImage // Uncomment and add the correct image path if needed
+    }
+  ]
+
   return (
     <div>
       <Container>
@@ -60,131 +105,41 @@ function Home() {
           </div>
 
           <div className='flex flex-col justify-center items-center sm:flex-row sm:justify-between'>
-            <Card sx={{ maxWidth: 245, backgroundColor: '#11112B', color: 'white', marginTop: '40px' }}>
-              <CardMedia
-                component="img"
-                alt="green iguana"
-                image={first}
-                sx={{
-                  width: '50%',
-                  objectFit: 'cover',
-                  display: 'flex',
-                  justifyContent: 'center',
-                  margin: '0 auto'
-                }}
-              />
-              <CardContent sx={{ marginTop: '30px' }}>
-                <Typography gutterBottom variant="h5" component="div"
+            {cardData.map((card, index) => (
+              <Card
+                key={index}
+                sx={{ maxWidth: 245, backgroundColor: '#11112B', color: 'white', marginTop: '40px' }}
+              >
+                <CardMedia
+                  component="img"
+                  alt={card.title}
+                  image={card.image}
                   sx={{
-                    textAlign: 'center',
-                    [theme.breakpoints.up('sm')]: {
-                      textAlign: 'left',
-                    },
-                  }}>
-                  Expertise
-                </Typography>
-                <Typography variant="body2">
-                  Our team of experienced experts have the knowledge and expertise to
-                  deliver innovative IT solutions that meet your unique needs
-                </Typography>
-              </CardContent>
-            </Card>
-
-            <Card sx={{ maxWidth: 245, backgroundColor: '#11112B', color: 'white', marginTop: '40px' }}>
-              <CardMedia
-                component="img"
-                alt="green iguana"
-                height="140"
-                image={third}
-                sx={{
-                  width: '50%',
-                  objectFit: 'cover',
-                  display: 'flex',
-                  justifyContent: 'center',
-                  margin: '0 auto',
-                }}
-              />
-              <CardContent sx={{ marginTop: '30px' }}>
-                <Typography gutterBottom variant="h5" component="div"
-                  sx={{
-                    textAlign: 'center',
-                    [theme.breakpoints.up('sm')]: {
-                      textAlign: 'left',
-                    },
+                    width: '50%',
+                    objectFit: 'cover',
+                    display: 'flex',
+                    justifyContent: 'center',
+                    margin: '0 auto',
                   }}
-                >
-                  Technology
-                </Typography>
-                <Typography variant="body2">
-                  We stay up to date with the latest trends and technologies in the IT industry,
-                  so you can get the most advanced solutions available.
-                </Typography>
-              </CardContent>
-            </Card>
-
-            <Card sx={{ maxWidth: 245, backgroundColor: '#11112B', color: 'white', marginTop: '40px' }}>
-              <CardMedia
-                component="img"
-                alt="green iguana"
-                height="140"
-                image={fourth}
-                sx={{
-                  width: '50%',
-                  objectFit: 'cover',
-                  display: 'flex',
-                  justifyContent: 'center',
-                  margin: '0 auto'
-                }}
-              />
-              <CardContent sx={{ marginTop: '30px' }}>
-                <Typography gutterBottom variant="h5" component="div"
-                  sx={{
-                    textAlign: 'center',
-                    [theme.breakpoints.up('sm')]: {
-                      textAlign: 'left',
-                    },
-                  }}
-                >
-                  Solutions
-                </Typography>
-                <Typography variant="body2">
-                  We take a personalized approach to every project, working closely with
-                  you to understand your business and create solutions.
-                </Typography>
-              </CardContent>
-            </Card>
-
-            <Card sx={{ maxWidth: 245, backgroundColor: '#11112B', color: 'white', marginTop: '40px' }}>
-              <CardMedia
-                component="img"
-                alt="green iguana"
-                height="140"
-                image={second}
-                sx={{
-                  width: '50%',
-                  objectFit: 'cover',
-                  display: 'flex',
-                  justifyContent: 'center',
-                  margin: '0 auto'
-                }}
-              />
-              <CardContent sx={{ marginTop: '30px' }}>
-                <Typography gutterBottom variant="h5" component="div"
-                  sx={{
-                    textAlign: 'center',
-                    [theme.breakpoints.up('sm')]: {
-                      textAlign: 'left',
-                    },
-                  }}
-                >
-                  Results
-                </Typography>
-                <Typography variant="body2">
-                  Our track record speaks for itself – we've helped businesses of all sizes
-                  and industries achieve their goals with our IT solutions.
-                </Typography>
-              </CardContent>
-            </Card>
+                />
+                <CardContent sx={{ marginTop: '30px' }}>
+                  <Typography
+                    gutterBottom
+                    variant="h5"
+                    component="div"
+                    sx={{
+                      textAlign: 'center',
+                      [theme.breakpoints.up('sm')]: {
+                        textAlign: 'left',
+                      },
+                    }}
+                  >
+                    {card.title}
+                  </Typography>
+                  <Typography variant="body2">{card.description}</Typography>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </Container>
@@ -242,131 +197,27 @@ function Home() {
             </Typography>
           </div>
           <div className='sm:flex'>
-            <ClientStory
-              title="Amazing!"
-              testimonial="“WaveNet's cybersecurity solution gave us the peace of mind we needed to focus on our business. They took the time to understand our unique needs and created a solution that protected our sensitive data and ensured compliance with industry regulations.”"
-              clientName="Tom Johnson"
-              clientTitle="CIO of Mika Medika Healthcare"
-            // clientImage={firstClientImage}
-            />
-            <hr className="border-1 border-gray-300 my-12 sm:mx-4 sm:h-40 sm:border-l sm:border-t-0" />
-            <ClientStory
-              title="Best Service"
-              testimonial="“We were struggling to keep up with the demands of our growing business until we partnered with WaveNet. Their custom software development solution has helped us streamline our operations and improve efficiency, saving us time and money.”"
-              clientName="Jane Doe"
-              clientTitle="COO of DEF Manufacturing"
-            // clientImage={firstClientImage}
-            />
-          </div>
-        </Container>
-      </div>
-      <div className='bg-[#D5D9E5] text-black min-h-screen'>
-        <div className='p-1 mt-28'>
-          <Typography
-            variant="h2"
-            gutterBottom
-            sx={{
-              fontWeight: 'bold',
-              display: 'flex',
-              justifyContent: 'center',
-              fontSize: '2rem',
-              marginTop: '40px',
-              [theme.breakpoints.up('sm')]: {
-                fontSize: '3.5rem'
-              },
-            }}
-          >
-            Services
-          </Typography>
-        </div>
-        <div className='mr-8 ml-8 sm:mr-20 sm:ml-20 mt-10'>
-          <ServiceCard serviceName="Custom Software Development" />
-          <hr className='border-1 border-gray-600 mt-8' />
-          <ServiceCard serviceName="Web Development" />
-          <hr className='border-1 border-gray-600 mt-8' />
-          <ServiceCard serviceName="Mobile Development" />
-          <hr className='border-1 border-gray-600 mt-8' />
-          <ServiceCard serviceName="IOT Development" />
-          <hr className='border-1 border-gray-600 mt-8' />
-          <ServiceCard serviceName="Embedded Designs" />
-          <hr className='border-1 border-gray-600 mt-8' />
-          <ServiceCard serviceName="Generative AI" />
-          <hr className='border-1 border-gray-600 mt-8' />
-          <ServiceCard serviceName="Machine Learning" />
-          <hr className='border-1 border-gray-600 mt-8' />
-          <ServiceCard serviceName="Bubble No-Code Development" />
-          <hr className='border-1 border-gray-600 mt-8' />
-        </div>
-      </div>
-      <div className='bg-[#11112B] text-white'>
-        <Container>
-          <div>
-            <div className='flex justify-center'>
-              <Typography
-                variant="h2"
-                gutterBottom
-                sx={{
-                  fontWeight: 'bold',
-                  fontSize: '1.5rem',
-                  marginTop: '80px',
-                  [theme.breakpoints.up('sm')]: {
-                    fontSize: '3rem'
-                  },
-                }}
-              >
-                Need IT Solutions?
-              </Typography>
-            </div>
-            <div className='flex justify-center'>
-              <Typography
-                variant="h2"
-                gutterBottom
-                sx={{
-                  fontWeight: 'bold',
-                  fontSize: '1.5rem',
-                  [theme.breakpoints.up('sm')]: {
-                    fontSize: '3rem'
-                  },
-                }}
-              >
-                Let’s start now
-              </Typography>
-            </div>
-            <div className='flex justify-center mt-8'>
-              <Button variant="outlined" sx={{ color: 'white' }}>GET FREE CONSULTATION</Button>
-            </div>
-          </div>
-          <div className='flex justify-around mt-28'>
-            <div className='flex flex-col sm:flex-row'>
-              <div className='text-[#92DEED] sm:w-1/5 text-2xl mb-4'>Wavenet</div>
-              <div className='flex justify-between'>
-                <div className='ml-8'>
-                  <div className='font-bold'>Explore</div>
-                  <div className='mt-2'>About</div>
-                  <div className='mt-2'>Services</div>
-                  <div className='mt-2'>Blog</div>
-                  <div className='mt-2'>Contact</div>
-                </div>
-                <div className='ml-8'>
-                  <div className='font-bold'>Contact</div>
-                  <div className='mt-2'>Email</div>
-                  <div className='mt-2'>Phone</div>
-                  <div className='mt-2'>Address</div>
-                  <div className='mt-2'>Social Media</div>
-                </div>
-                <div className='ml-8'>
-                  <div className='font-bold'>Newsletter</div>
-                  <div className='w-1/2'>
-                    Subscribe to our newsletter to stay informed about our latest products, services, and promotions.
-                    Feel free to unsubscribe anytime!
-                  </div>
-                </div>
-              </div>
-            </div>
+            {clientStories.map((story, index) => (
+              <React.Fragment key={index}>
+                <ClientStory
+                  key={index}
+                  title={story.title}
+                  testimonial={story.testimonial}
+                  clientName={story.clientName}
+                  clientTitle={story.clientTitle}
+                  clientImage={story.clientImage}
+                />
+                {index < clientStories.length - 1 && (
+                  <hr className="border-1 border-gray-300 my-12 sm:mx-4 sm:h-40 sm:border-l sm:border-t-0" />
+                )}
+              </React.Fragment>
+            ))}
           </div>
           <hr className='border-1 white mt-8' />
         </Container>
       </div>
+      
+      <Consultation />
     </div>
   )
 }

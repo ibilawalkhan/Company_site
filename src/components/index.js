@@ -4,6 +4,7 @@ import Container from "./container/Container";
 import Card from "./Card/Card";
 import ClientStory from "./ClientStory";
 import ServiceCard from "./ServiceCard";
+import Consultation from "./Consultation";
 
 export {
     Header,
@@ -11,5 +12,6 @@ export {
     Container,
     Card,
     ClientStory,
-    ServiceCard
+    ServiceCard,
+    Consultation
 }
