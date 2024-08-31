@@ -32,7 +32,7 @@ function ServiceCard({
                                 sx={{
                                     fontSize: '1rem',
                                     fontWeight: 'bold',
-                                    // color: '#fff',
+                                    color: '#fff',
                                     color: '#92DEED',
                                 }}
                             >

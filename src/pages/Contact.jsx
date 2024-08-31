@@ -96,6 +96,7 @@ function Contact() {
             </Typography>
             <textarea
               id="message"
+              rows="7"
               {...register("message", { required: "Message is required" })}
               className={`w-full px-4 py-2 rounded-md border-2 focus:outline-none text-black focus:border-blue-500 ${errors.message ? 'border-red-500' : 'border-gray-300'}`}
               aria-invalid={errors.message ? "true" : "false"}
