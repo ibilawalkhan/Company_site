@@ -5,8 +5,8 @@ import './index.css'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import {
   Home,
-  About,
   Services,
+  Project,
   Blog,
   Contact
 } from './pages/index'
@@ -21,13 +21,14 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: "/about",
-        element: <About />,
-      },
-      {
         path: "/services",
         element: <Services />,
       },
+      {
+        path: "/project",
+        element: <Project />,
+      },
+      
       {
         path: "/blog",
         element: <Blog />,

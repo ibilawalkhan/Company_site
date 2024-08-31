@@ -6,8 +6,8 @@ function Header() {
 
     const navItems = [
         { name: "Home", slug: "/" },
-        { name: "About", slug: "/about" },
         { name: "Services", slug: "/services" },
+        { name: "Projects", slug: "/project" },
         { name: "Blog", slug: "/blog" },
         { name: "Contact", slug: "/contact" }
     ]
