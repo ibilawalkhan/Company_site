@@ -7,6 +7,10 @@ import sixth from './sixth.png'
 import seventh from './seventh.png'
 import eigth from './eigth.png'
 import nineth from './nineth.png'
+import Discovery from './Discovery.png'
+import Planning from './Planning.png'
+import Development from './Development.png'
+import Implementation from './Implementation.png'
 
 export {
     first,
@@ -17,5 +21,9 @@ export {
     sixth,
     seventh,
     eigth,
-    nineth
+    nineth,
+    Discovery,
+    Planning,
+    Development,
+    Implementation
 }

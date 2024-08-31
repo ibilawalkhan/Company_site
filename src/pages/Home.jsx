@@ -143,6 +143,7 @@ function Home() {
           </div>
         </div>
       </Container>
+
       <div className='bg-[#D5D9E5] text-black min-h-screen flex flex-col items-center justify-center'>
         <Container>
           <div className='flex justify-center'>
@@ -175,6 +176,7 @@ function Home() {
           </div>
         </Container>
       </div>
+
       <div className='bg-[#11112B] text-white min-h-96'>
         <Container>
           <div className=''>
@@ -216,7 +218,7 @@ function Home() {
           <hr className='border-1 white mt-8' />
         </Container>
       </div>
-      
+
       <Consultation />
     </div>
   )

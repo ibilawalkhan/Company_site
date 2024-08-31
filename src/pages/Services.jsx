@@ -12,10 +12,15 @@ import {
   sixth,
   seventh,
   eigth,
-  nineth
+  nineth,
+  Discovery,
+  Planning,
+  Development,
+  Implementation
 } from '../assets/Services/index'
 import {
-  ServiceCard
+  ServiceCard,
+  HowItWorks
 } from '../components/index'
 
 function Services() {
@@ -32,6 +37,33 @@ function Services() {
     { image: nineth, title: 'Network Management', description: 'Provide management of network infrastructure design for clients.' }
   ]
 
+  const process = [
+    {
+      no: '01',
+      image: Discovery,
+      name: 'Discovery',
+      description: "We'll conduct a thorough analysis of your operations, market, and competition to identify the best solutions for you."
+    },
+    {
+      no: '02',
+      image: Planning,
+      name: 'Planning',
+      description: "Once we have a clear understanding, we develop a customized plan for the services and solutions we provide."
+    },
+    {
+      no: '03',
+      image: Development,
+      name: 'Development',
+      description: "We begin the design and development process, creating custom solutions for your specific business needs."
+    },
+    {
+      no: '04',
+      image: Implementation,
+      name: 'Implementation',
+      description: "We implement our solution into your business operations and integrate them with other systems and platforms."
+    }
+  ]
+
   return (
     <Container>
       <div className='min-h-80'>
@@ -44,7 +76,7 @@ function Services() {
               fontSize: '2rem',
               textAlign: 'center',
               [theme.breakpoints.up('sm')]: {
-                fontSize: '2.5rem',
+                fontSize: '4rem',
               }
             }}
           >
@@ -59,6 +91,46 @@ function Services() {
               title={service.title}
               description={service.description}
             />
+          ))}
+        </div>
+      </div>
+
+      <div className='min-h-screen'>
+        <div>
+          <Typography
+            variant="h2"
+            gutterBottom
+            sx={{
+              fontWeight: 'bold',
+              fontSize: '2rem',
+              textAlign: 'center',
+              marginTop: '6rem',
+              marginBottom: '2rem',
+              [theme.breakpoints.up('sm')]: {
+                fontSize: '3rem',
+              }
+            }}
+          >
+            How It Works
+          </Typography>
+        </div>
+        <div className='flex flex-col justify-center items-center'>
+          <div className="flex justify-center items-center">
+            <hr className="border-2 border-[#92DEED] my-12 mx-4 h-40 border-l border-t-0" />
+          </div>
+
+          {process.map((process, index) => (
+            <div key={index}>
+              <HowItWorks
+                no={process.no}
+                image={process.image}
+                name={process.name}
+                description={process.description}
+              />
+              <div className="flex justify-center items-center">
+                <hr className="border-2 border-[#92DEED] my-12 mx-4 h-40 border-l border-t-0" />
+              </div>
+            </div>
           ))}
         </div>
       </div>
