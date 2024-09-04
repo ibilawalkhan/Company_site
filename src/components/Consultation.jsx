@@ -5,7 +5,7 @@ import theme from '../theme'
 import Button from '@mui/material/Button';
 import { useNavigate } from 'react-router-dom';
 
-function Consultation() {
+function Consultation({ className = "" }) {
 
     const navigate = useNavigate();
 
@@ -15,7 +15,7 @@ function Consultation() {
 
     return (
         <div>
-            <div className='bg-[#11112B] text-white'>
+            <div className={` bg-[#11112B] text-white  ${className}`}>
                 <Container>
                     <div>
                         <div className='flex justify-center'>

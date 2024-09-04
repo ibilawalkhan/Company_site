@@ -7,6 +7,11 @@ import ServiceCard from "./Card/ServiceCard";
 import Consultation from "./Consultation";
 import HowItWorks from "./HowItWorks";
 import ProjectCard from "./Card/ProjectCard";
+import BlogPostCard from "./Card/BlogPostCard";
+import SearchBlog from "./SearchBlog";
+import LikeButton from "./LikeButton";
+import CommentCard from "./Card/CommentCard";
+import AddComment from './Card/AddComment'
 
 export {
     Header,
@@ -17,5 +22,10 @@ export {
     ServiceCard,
     Consultation,
     HowItWorks,
-    ProjectCard
+    ProjectCard,
+    BlogPostCard,
+    SearchBlog,
+    LikeButton,
+    CommentCard,
+    AddComment
 }
